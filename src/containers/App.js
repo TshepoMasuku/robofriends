@@ -5,7 +5,6 @@ import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
-// This means the current directory './', and this means the previous directory '../'.
 
 class App extends React.Component {
   constructor() {
@@ -18,14 +17,10 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then( response => response.json() )
-    .then( users => this.setState({ robots: users }) )
+      .then( response => response.json() )
+      .then( users => this.setState({ robots: users }) )
   }
 
-  // onSearchChange = () => {
-  //   const input = document.querySelector('input');
-  //   this.setState( { searchfield: input.value } )
-  // }
   onSearchChange = (event) => {
     this.setState( { searchfield: event.target.value } )
   }
@@ -44,7 +39,6 @@ class App extends React.Component {
           <h1 className='f1'>ROBOFRIENDS</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <br></br>
-          {/* <hr></hr> */}
           <Scroll>
             <br></br>
             <ErrorBoundry>
