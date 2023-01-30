@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
-import 'tachyons';
-import SearchBox from '../components/SearchBox';
-import CardList from '../components/CardList';
-import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
+import SearchBox from '../components/SearchBox';
+import CardList from './CardList';
+import Scroll from './Scroll';
+import 'tachyons';
+import './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -32,15 +32,15 @@ class App extends React.Component {
     });
 
     if (robots.length === 0) {
-      return <h1 className='f1 tc'> LOADING... </h1>
+      return <h1 className='tc'> LOADING... </h1>
     } else {
       return (
-        <div className='tc'>
-          <h1 className='f1'>ROBOFRIENDS</h1>
+        <div className='App tc'>
+          <h1>ROBOFRIENDS</h1>
           <SearchBox searchChange={this.onSearchChange}/>
-          <br></br>
+          <br/>
           <Scroll>
-            <br></br>
+            <br/>
             <ErrorBoundry>
               <CardList robots={filteredRobots}/>
             </ErrorBoundry>

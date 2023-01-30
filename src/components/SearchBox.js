@@ -8,6 +8,7 @@ const SearchBox = ( {searchChange} ) => {
                 type='search' 
                 placeholder='Search Robots'
                 onChange={searchChange}
+                style={{ minWidth: '222px', width: '60vw', marginInline: 'auto' }}
             />
         </div>
     )
