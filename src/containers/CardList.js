@@ -5,9 +5,10 @@ const CardList = ( {robots} ) => {
     return(
         <div
             style={{
+                padding: '0 16px',
                 display: 'flex', 
                 flexWrap:'wrap',
-                padding: '0 16px',
+                justifyContent: 'center',
             }}
         >
             {

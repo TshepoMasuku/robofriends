@@ -9,7 +9,7 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super()
-    this.state = {
+    this.state = { 
       robots: [],
       searchfield: '',
     }
@@ -40,14 +40,13 @@ class App extends React.Component {
           <SearchBox searchChange={this.onSearchChange}/>
           <br/>
           <Scroll>
-            <br/>
             <ErrorBoundry>
               <CardList robots={filteredRobots}/>
             </ErrorBoundry>
           </Scroll>
         </div>
       );
-      }
+    }
   }
 }
 
